@@ -15,7 +15,7 @@ Si vous voulez tester le site ou continuer à le développer, vous devez le lanc
 
 ### Dépendances : 
 Avant de lancer le site, assurez-vous d'avoir installé : 
-- [Node.js] ainsi que npm
+- [Node.js](https://nodejs.org/en/) ainsi que npm
 
 ### Lancement
 Afin de lancer le site en local, il faut : 
@@ -25,10 +25,10 @@ Afin de lancer le site en local, il faut :
  4. Lancer le serveur de développement avec la commande : `$npm start`
 
 # Suite du développent :
- Il faut principalement ajouter 5 pages :
- [x] La page d'accueil
- [ ] La page "édition en cours"
- [ ] La page Inscriptions
- [ ] La page "éditions précédentes
- [x] La page Contacts
+Il faut principalement ajouter 5 pages :
+- [x] La page d'accueil
+- [ ] La page "édition en cours"
+- [ ] La page Inscriptions
+- [ ] La page "éditions précédentes
+- [x] La page Contacts
 
