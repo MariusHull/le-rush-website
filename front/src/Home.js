@@ -115,7 +115,7 @@ class Home extends Component {
         <div class="parallax-container valign-wrapper">
           <div class="section no-pad-bot">
           </div>
-          <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+          <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></img></div>
         </div>
         
       </div>
