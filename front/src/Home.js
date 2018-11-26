@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
 
 
 
 class Home extends Component {
   render() {
     return (
+        
       <div>
         
-
 
         <div id="index-banner" class="parallax-container">
           <div class="section no-pad-bot">
@@ -31,7 +32,7 @@ class Home extends Component {
         </div>
       
       
-        <div class="container">
+        <div class="container"> 
           <div class="section">
       
 
@@ -94,7 +95,7 @@ class Home extends Component {
         
               </div>
             </div>
-            <div class="parallax"><img src="IMGLens.jpg"></img></div>
+            <div class="parallax"><img src="IMGLeRushLogo.png"></img></div>
           </div>
       
         <div class="container">

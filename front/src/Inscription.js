@@ -32,7 +32,6 @@ class Candidat extends React.Component {
               <input
                 name='nom'
                 type="text"
-                placeholder="Nom"
                 value={this.props.nom}
                 onChange={this.handleInputChange} />
             </label>
@@ -42,7 +41,7 @@ class Candidat extends React.Component {
               <input
                 name='prenom'
                 type="text"
-                placeholder="Prénom"
+
                 value={this.props.prenom}
                 onChange={this.handleInputChange} />
             </label>
@@ -52,7 +51,7 @@ class Candidat extends React.Component {
               <input
                 name='tel'
                 type="text"
-                placeholder="n° de téléphone"
+
                 value={this.props.tel}
                 onChange={this.handleInputChange} />
             </label>
@@ -83,7 +82,7 @@ class Inscription extends React.Component {
 class ListeInscrits extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {liste: [], nomEnCours: "", prenomEnCours: "", telEnCours: "" };
+        this.state = {liste: [], nomEnCours: "", prenomEnCours: "", telEnCours: "", toutChampsComplets: false };
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -95,6 +94,11 @@ class ListeInscrits extends React.Component {
         }
         else {
             this.setState({telEnCours: inscrit})
+        }
+        if(this.state.nomEnCours===""|| this.state.prenomEnCours==="" || this.state.telEnCours==="" ){
+            this.setState({toutChampsComplets: false});
+        } else {
+            this.setState({toutChampsComplets: true});
         }
     }
 
@@ -110,8 +114,13 @@ class ListeInscrits extends React.Component {
             prenom={this.state.prenomEnCours}
             tel={this.state.telEnCours}
             actualiser={this.handleChange}/>
-            <button className="valider" onClick={()=> this.ajouterLigne(this.state.nomEnCours,this.state.prenomEnCours,this.state.telEnCours)}>
-            Inscrire le membre</button>
+            <br/>
+            {this.state.toutChampsComplets ? 
+                <a class="waves-effect waves-light btn" onClick={()=> this.ajouterLigne(this.state.nomEnCours,this.state.prenomEnCours,this.state.telEnCours)}><i class="material-icons right">add</i>Inscrire le membre</a>
+                :
+                <a class="btn disabled" ><i class="material-icons right">add</i>Inscrire le membre</a>
+            }
+            
             <h3> Ceci est la liste des inscrits : </h3>
             <CandidatsListe liste={this.state.liste}/>
           </div>
@@ -119,13 +128,29 @@ class ListeInscrits extends React.Component {
     }
 }
 
+function BoutonInscrire(props) {
+    
+}
 
 function CandidatsListe(props) {
   const listeCandidats = props.liste.map(
-    (candidat) => <li> {candidat.split("[esp]")[0]} , {candidat.split("[esp]")[1]} , {candidat.split("[esp]")[2]}</li>
+    (candidat) => <tr> <td>{candidat.split("[esp]")[0]}</td><td>{candidat.split("[esp]")[1]}</td><td>{candidat.split("[esp]")[2]}</td></tr>
   );
   return(
-    <ul> {listeCandidats}</ul>
+    <table>
+    <thead>
+      <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>N° de téléphone</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {listeCandidats}
+    </tbody>
+  </table>
+
   );
 }
 

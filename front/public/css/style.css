@@ -62,3 +62,11 @@ footer.page-footer {
   background-color: #fe5e5e;
   margin: 0;
 }
+
+#maps {
+    align-content: center
+}
+
+*{
+  font-family : 'Fira Sans', sans-serif
+}
