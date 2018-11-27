@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
+
 
 
 
@@ -28,7 +28,7 @@ class Home extends Component {
       
             </div>
           </div>
-          <div class="parallax"><img src="IMGLens.jpg"></img></div>
+          <div class="parallax"><img src="IMGLens.jpg" alt=""></img></div>
         </div>
       
       
@@ -95,7 +95,7 @@ class Home extends Component {
         
               </div>
             </div>
-            <div class="parallax"><img src="IMGLeRushLogo.png"></img></div>
+            <div class="parallax"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/43382026_1860593300642629_1343849757444931584_o.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=9e7209515982f6c76f196512a7a48389&oe=5C72A26B" alt="Unsplashed background img 3"></img></div>
           </div>
       
         <div class="container">
@@ -116,7 +116,7 @@ class Home extends Component {
         <div class="parallax-container valign-wrapper">
           <div class="section no-pad-bot">
           </div>
-          <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></img></div>
+          <div class="parallax"><img src="IMGLeRushLogo.png" alt="Le Rush logo"></img></div>
         </div>
         
       </div>

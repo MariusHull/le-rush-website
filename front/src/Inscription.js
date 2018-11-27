@@ -128,9 +128,7 @@ class ListeInscrits extends React.Component {
     }
 }
 
-function BoutonInscrire(props) {
-    
-}
+
 
 function CandidatsListe(props) {
   const listeCandidats = props.liste.map(
