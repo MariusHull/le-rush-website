@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Inscription from './Inscription.js'
+import Home from './Home.js'
+import Contacts from './Contacts.js'
+import Navbar from './Navbar.js'
+import Footer from './Footer.js'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div>
+          <Navbar/>
+          <Route exact path="/" component={Home} />
+          <Route path="/contacts" component={Contacts} />
+          <Route path="/inscription" component={Inscription} />
+          <Footer/>
+    </div>
+  </Router>
     );
   }
 }
+
+
+
+
 
 export default App;
