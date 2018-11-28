@@ -20,24 +20,14 @@ class Footer extends Component {
                 </p>
               </div>
 
-              <div class="col l3 s12">
-                <h5 class="white-text">Settings</h5>
-                <ul>
-                  <li><a class="white-text" href="#!">Link 1</a></li>
-                  <li><a class="white-text" href="#!">Link 2</a></li>
-                  <li><a class="white-text" href="#!">Link 3</a></li>
-                  <li><a class="white-text" href="#!">Link 4</a></li>
-                </ul>
-              </div>
           
 
               <div class="col l3 s12">
                 <h5 class="white-text">Nous contacter : </h5>
                 <ul>
                   <li><a class="white-text" href="https://www.facebook.com/LeRusHyrisTV/">Facebook</a></li>
-                  <li><a class="white-text" href="#!">Link 2</a></li>
-                  <li><a class="white-text" href="#!">Link 3</a></li>
-                  <li><a class="white-text" href="#!">Link 4</a></li>
+                  <li><Link to="contacts" class="white-text">Page contacts</Link></li>
+                  <li><a class="white-text" href="https://hyris.tv/">Site de Hyris.tv</a></li>
                 </ul>
               </div>
             </div>
