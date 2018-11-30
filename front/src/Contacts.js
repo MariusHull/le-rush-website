@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 
-function Contacts(props) {
-    return(
-    <div class = "container"> 
+class Contacts extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      contacts: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:3000/contacts')
+      .then(res => {
+        this.setState({ contacts: res.data });
+        console.log(this.state.contacts);
+      });
+  }
+
+  render() {
+    return (
+      <div class = "container"> 
       <h2> Contacts : </h2>
-        <ContactList tableauContacts={tableauContacts}/>
+        <ContactList tableauContacts={this.state.contacts}/>
   
       <h2> Plan d'accès : </h2>
         <AccessList/>
 
       <div class = "row">
         <div class = "col s12 m2 l3" ></div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.8250845456823!2d2.1617608158991994!3d48.708824119179866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67f5ab9b602a9%3A0x7cfcf25a43cab9eb!2sCentraleSup%C3%A9lec+-+Campus+Paris+Saclay!5e0!3m2!1sfr!2sfr!4v1543184807143" class = "col s12 m8 l6" height = "500px" frameborder="0" id="maps" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.8250845456823!2d2.1617608158991994!3d48.708824119179866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67f5ab9b602a9%3A0x7cfcf25a43cab9eb!2sCentraleSup%C3%A9lec+-+Campus+Paris+Saclay!5e0!3m2!1sfr!2sfr!4v1543184807143" class = "col s12 m8 l6" height = "500px" frameBorder="0"></iframe>
         <div class = "col s12 m2 l3" ></div>
       </div>
 
@@ -23,7 +40,11 @@ function Contacts(props) {
     </div>
     );
   }
-  
+}
+
+
+
+  /*
   const tableauContacts = [{nom: "Marius Hullin", telephone: "06 47 71 95 85", mail: "marius.hullin@student.ecp.fr", fonction: "Président du festival", 
   path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14915266_1148620721852333_6349151884132689361_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=ba3a063962a7ec054cc698287a094d7f&oe=5C6DEBB2",
   profilePath: "https://www.facebook.com/marius.hullin"}, 
@@ -35,7 +56,7 @@ function Contacts(props) {
   {nom: "Charles Combelles", telephone: "06 88 69 25 48", mail: "charles.combelles@student.ecp.fr", fonction: "Responsable équipes du festival", 
   path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/41564838_1136235403194795_91169172007944192_n.jpg?_nc_cat=109&_nc_ht=scontent-cdt1-1.xx&oh=a532632d515bfd52c34487b8960b4ce9&oe=5C662412",
   profilePath: "https://www.facebook.com/charles.combelles"}]
-
+*/
 
 
   

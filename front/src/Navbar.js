@@ -11,8 +11,8 @@ class Navbar extends Component {
     <div>
       <nav class="black" role="navigation">
           <div class="nav-wrapper container">
-            <Link to="/" id="logo-container"  class="brand-logo"><img src="./IMGLeRushLogo.png" alt="Icone Rush" width="10%" height="10%" align="center"/>Le Rush</Link>
-            <ul class="right hide-on-med-and-down">
+            <Link to="/"> <div id="logo-container"  className="brand-logo"><img src="./IMGLeRushLogo.png" alt="Icone Rush" width="10%" height="10%" align="center"/>Le Rush</div></Link>
+            <ul className="right hide-on-med-and-down">
               <li><a href="/">Edition 2019</a></li>
               <li><Link to="/inscription">S'inscrire</Link></li>
               <li><a href="#">Les éditions précédentes</a></li>
