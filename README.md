@@ -23,9 +23,13 @@ Afin de lancer le site en local, il faut :
  1. Cloner le contenu du Git
  2. Ouvrir une instance du terminal et se placer dans le bon dossier avec : `$cd le-rush-website/front`
  3. Installer les packages appropriés avec la commande : `$npm install`
- 4. Lancer le serveur de développement avec la commande : `$npm start`
+ 4. Lancer le serveur front-end avec la commande : `$npm start`
+ 5. Lancer une instance de MongoDB avec la commande `$mongod`
+ 6. Ouvrir une deuxième instance du terminal et se placer dans le bon dossier avec : `$cd le-rush-website/back`
+ 7. Installer les packages appropriés avec la commande : `$npm install`
+ 8. Lancer le serveur back-end avec la commande : `$npm start`
 
-# Suite du développent :
+# Suite du développement :
 Il faut principalement ajouter 5 pages :
 - [x] La page d'accueil
 - [ ] La page "édition en cours"

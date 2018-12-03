@@ -6218,9 +6218,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+/*MODIF*/  border-bottom: 1px solid #fe5e5e;
+/*MODIF*/  -webkit-box-shadow: 0 1px 0 0 #fe5e5e;
+/*MODIF*/          box-shadow: 0 1px 0 0 #b14040;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6775,12 +6775,12 @@ textarea.materialize-textarea {
 [type="radio"]:checked + span:after,
 [type="radio"].with-gap:checked + span:before,
 [type="radio"].with-gap:checked + span:after {
-  border: 2px solid #26a69a;
+/*MODIF*/  border: 2px solid #fe5e5e;
 }
 
 [type="radio"]:checked + span:after,
 [type="radio"].with-gap:checked + span:after {
-  background-color: #26a69a;
+/*MODIF*/  background-color: #fe5e5e;
 }
 
 [type="radio"]:checked + span:after {

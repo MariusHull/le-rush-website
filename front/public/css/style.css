@@ -70,3 +70,15 @@ footer.page-footer {
 *{
   font-family : 'Fira Sans', sans-serif
 }
+
+.couleurRush {
+  background-color: #fe5e5e !important;
+}
+
+.btn {
+  background-color: #fe5e5e !important;
+}
+
+.teal.lighten-1 {
+  background-color: #fe5e5e !important;
+}
