@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -16,7 +16,8 @@ class Footer extends Component {
                 <h5 class="white-text">L'équipe organisatrice</h5>
                 <p class="grey-text text-lighten-4">Tous membres de l'association audiovisuelle Hyris, 
                   nous sommes heureux de reprendre l'organisation de ce festival, 
-                  pour en faire avec vous un événement execptionnel.
+                  pour en faire avec vous un événement execptionnel. <br/>
+                  
                 </p>
               </div>
 
@@ -35,7 +36,9 @@ class Footer extends Component {
           <div class="footer-copyright">
             <div class="container">
             Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>, powered by <a class="brown-text text-lighten-3" href="https://reactjs.org/">React.JS</a>.
-            </div>
+            <Link to="/membre" className="white-text right">Accès Membre</Link>
+          </div>
+
           </div>
         </footer>
     </div>

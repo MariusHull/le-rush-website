@@ -1,21 +1,25 @@
 import React  from 'react';
+import axios from 'axios';
 
 
 class Inscription extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {nomEcole: "", nomAsso:"", listeMembres:"", veutPreRush: false, dateArrivee:"Vendredi", heureArrivee:"", veutHebergement: false, remarques:"", liste: []};
+    this.state = {nomEcole: "", nomAsso:"", veutPreRush: false, dateArrivee:"Vendredi", veutHebergement: false, remarques:"", liste: []};
     this.actualiseNom = this.actualiseNom.bind(this);
     this.actualisePreRush = this.actualisePreRush.bind(this);
     this.actualiseVeutHebergement = this.actualiseVeutHebergement.bind(this);
     this.actualiseDateArrivee = this.actualiseDateArrivee.bind(this);
     this.actualiseListe = this.actualiseListe.bind(this);
+    this.actualiseRemarque = this.actualiseRemarque.bind(this);
+    this.estCorrect = this.estCorrect.bind(this);
+    this.inscrire = this.inscrire.bind(this);
   }
 
   actualiseNom(nom, target) {
     if(target.name==="school"){
       this.setState({nomEcole: nom});
-    }
+    } else { this.setState({nomAsso: nom})}
   }
 
   actualiseListe(liste) {
@@ -23,17 +27,40 @@ class Inscription extends React.Component {
   }
 
   actualisePreRush(event) {
-    this.setState({veutPreRush: !this.state.veutPreRush});
+    this.setState({veutPreRush: event.target.value});
   }
 
   actualiseVeutHebergement(event) {
-    this.setState({veutHebergement: !this.state.veutHebergement});
+    this.setState({veutHebergement: event.target.value});
   }
 
   actualiseDateArrivee(event) {
     this.setState({dateArrivee: event.target.value})
   }
 
+  actualiseRemarque(event) {
+    this.setState({remarques: event.target.value})
+  }
+
+  estCorrect(){
+    if(this.state.liste.length<5 || this.state.liste.lenght>7) {
+      window.alert("Votre équipe doit comporter entre 5 et 7 membres!")
+      return false
+    }
+    else if(this.state.nomEcole==="" || this.state.nomAsso===""){
+      window.alert("Veuillez bien indiquer le nom de votre école et de votre association/équipe")
+      return false
+    }
+    else { return true }
+  }
+
+  inscrire() {
+    if(this.estCorrect()){
+      window.confirm('Confirmez-vous les infformations précédentes ?', axios.post('http://localhost:3000/equipes', this.state)
+        .then((result) => {console.log(result)})
+        )
+    }
+  }
 
   render() {
       return (
@@ -43,19 +70,19 @@ class Inscription extends React.Component {
           <NomEquipe nomEcole={this.state.nomEcole} nomAsso={this.state.nomAsso} actualiseNom={this.actualiseNom}/>
           <h3>Membres de l'équipe : </h3>
           <ListeInscrits actualiseListe={this.actualiseListe}/>
-          <DateHeureArrivee arriveVendredi={this.state.arriveVendredi} actualiseDateArrivee={this.actualiseDateArrivee}/>
+          <DateArrivee arriveVendredi={this.state.arriveVendredi} actualiseDateArrivee={this.actualiseDateArrivee}/>
           <ParticipePreRush participe={this.state.veutPreRush} actualisePreRush={this.actualisePreRush}/>
           <VeutHebergement veutHebergement={this.state.veutHebergement} actualiseVeutHebergement={this.actualiseVeutHebergement}/>
-          <Remarques/>
-          {this.state.liste}
+          <Remarques remarques={this.state.remarques} actualiseRemarque={this.actualiseRemarque}/>
 
-          
-
+          <div className="row"></div>
+          <a class="waves-effect waves-light btn" onClick={()=> this.inscrire()}><i class="material-icons right">add</i>Confirmer l'inscription</a>
+          <div className="row"></div>
         </div>
       );
     }
 }
-//<a class="waves-effect waves-light btn" onClick={()=> console.log("ca marche")}><i class="material-icons right">add</i>Confirmer</a>
+
 
 
 
@@ -73,27 +100,29 @@ class NomEquipe extends React.Component {
   render() {
       return (
         <form>
-            <label>
-              &nbsp;<h6>Nom de votre école:</h6> &nbsp;
-              <input
+          <div className="row">
+          <div className="input-field col s12 l6">
+              <textarea
+                class="materialize-textarea"
                 name='school'
-                type="text"
+                id="nomEcole"
                 value={this.props.nomEcole}
-                onChange={this.handleInputChange} />
-            </label>
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="nomEcole">Nom de votre école</label>
+          </div>
 
-            <label>
-              &nbsp;Nom de votre association (équipe) : &nbsp;
-              <input
+          <div className="input-field col s12 l6">
+              <textarea
+                class="materialize-textarea"
                 name='asso'
-                type="text"
-
+                id="nomAsso"
                 value={this.props.nomAsso}
-                onChange={this.handleInputChange} />
-            </label>
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="nomAsso">Nom de votre association (équipe) :</label>
+          </div>
+          </div>
 
-
-          </form>
+        </form>
         );
 
     }
@@ -140,9 +169,11 @@ class ListeInscrits extends React.Component {
                 :
                 <a class="btn disabled" ><i class="material-icons right">add</i>Inscrire le membre</a>
             }
-            
-            <h3> Ceci est la liste des inscrits : </h3>
-            <CandidatsListe liste={this.state.liste}/>
+            <div className="row"></div>
+            <div className="row">
+            <h4 className="col s12 m4 l4"> Liste des inscrits : </h4>
+            <div className="col s12 m8 l8"><CandidatsListe liste={this.state.liste}/></div>
+            </div>
           </div>
         );
     }
@@ -184,49 +215,60 @@ class Candidat extends React.Component {
       render() {
         return (
           <form>
-            <label>
-              &nbsp;Nom : &nbsp;
-              <input
+          <div className="row">
+          <div className="input-field">
+              <textarea
+                class="materialize-textarea"
                 name='nom'
-                type="text"
+                id="nomParticipant"
                 value={this.props.nom}
-                onChange={this.handleInputChange} />
-            </label>
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="nomParticipant">Nom :</label>
+          </div>  
+          </div>
 
-            <label>
-              &nbsp;Prénom : &nbsp;
-              <input
+          <div className="row">
+          <div className="input-field">
+              <textarea
+                class="materialize-textarea"
                 name='prenom'
-                type="text"
-
+                id="prenomParticipant"
                 value={this.props.prenom}
-                onChange={this.handleInputChange} />
-            </label>
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="prenomParticipant">Prénom :</label>
+          </div>  
+          </div>
 
-            <label>
-              &nbsp;Télephone : &nbsp;
-              <input
+          <div className="row">
+          <div className="input-field">
+              <textarea
+                class="materialize-textarea"
                 name='tel'
-                type="text"
-
+                id="telParticipant"
                 value={this.props.tel}
-                onChange={this.handleInputChange} />
-            </label>
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="telParticipant">Téléphone :</label>
+          </div>  
+          </div>
           </form>
         );
       }
 }
 
-class DateHeureArrivee extends React.Component {
+class DateArrivee extends React.Component {
   constructor(props) {
     super(props);
     this.handleInputChange=this.handleInputChange.bind(this);
 }
 
+
+
 handleInputChange(event) {
   this.props.actualiseDateArrivee(event)
 
 }
+
+
 
 render() {
     return (
@@ -252,7 +294,6 @@ render() {
             </label>
           </p>
 
-
         </form>
     );
   }
@@ -275,13 +316,13 @@ class ParticipePreRush extends React.Component {
 
             <p>
               <label>
-                <input name="group1" type="radio" className="" checked={this.props.participe} onChange={this.handleInputChange}/>
+                <input name="group1" type="radio" value={false} onChange={this.handleInputChange}/>
                 <span>Non</span>
               </label>
             </p>
             <p>
               <label>
-                <input name="group1" type="radio" onChange={this.handleInputChange}/>
+                <input name="group1" type="radio" value={true} onChange={this.handleInputChange}/>
                 <span>Oui</span>
               </label>
             </p>
@@ -309,13 +350,13 @@ render() {
 
           <p>
             <label>
-              <input name="group1" type="radio" checked={this.props.veutHebergement} onChange={this.handleInputChange}/>
+              <input name="group1" type="radio" value={false} onChange={this.handleInputChange}/>
               <span>Non</span>
             </label>
           </p>
           <p>
             <label>
-              <input name="group1" type="radio" onChange={this.handleInputChange}/>
+              <input name="group1" type="radio" value= {true} onChange={this.handleInputChange}/>
               <span>Oui</span>
             </label>
           </p>
@@ -328,17 +369,29 @@ render() {
 
 class Remarques extends React.Component {
   constructor(props) {
-      super(props);
+    super(props);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    this.props.actualiseRemarque(event)
   }
 
 
   render() {
       return (
-        <div>
-          
+        <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea" value={this.props.remarques} onChange={this.handleInputChange}></textarea>
+              <label for="textarea1">Remarques quelconques à nous transmettre (facultatif) :</label>
+            </div>
+          </div>
+        </form>
+      </div>
+        );
 
-        </div>
-      );
     }
 }
 

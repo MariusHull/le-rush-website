@@ -5,8 +5,9 @@ import Home from './Home.js'
 import Contacts from './Contacts.js'
 import Navbar from './Navbar.js'
 import Footer from './Footer.js'
+import Membre from './Membre'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import axios from 'axios';
+
 
 
 
@@ -19,9 +20,10 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/contacts" component={Contacts} />
           <Route path="/inscription" component={Inscription} />
+          <Route path="/membre" component={Membre} />
           <Footer/>
-    </div>
-  </Router>
+        </div>
+      </Router>
     );
   }
 }

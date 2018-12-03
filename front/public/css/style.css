@@ -82,3 +82,7 @@ footer.page-footer {
 .teal.lighten-1 {
   background-color: #fe5e5e !important;
 }
+
+.parallax{
+  position:static;
+}

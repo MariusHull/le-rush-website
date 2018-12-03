@@ -33,7 +33,8 @@ Afin de lancer le site en local, il faut :
 Il faut principalement ajouter 5 pages :
 - [x] La page d'accueil
 - [ ] La page "édition en cours"
-- [ ] La page Inscriptions
+- [x] La page Inscriptions
 - [ ] La page "éditions précédentes"
 - [x] La page Contacts
+- [x] La page de consultation des équipes
 
