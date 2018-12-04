@@ -23,7 +23,7 @@ class Contacts extends Component {
     return (
       <div class = "container"> 
       <h2> Contacts : </h2>
-        <ContactList tableauContacts={this.state.contacts}/>
+        <ContactList tableauContacts={tableauContacts}/>
   
       <h2> Plan d'accès : </h2>
         <AccessList/>
@@ -45,19 +45,19 @@ class Contacts extends Component {
 
 
 
-  /*
-  const tableauContacts = [{nom: "Marius Hullin", telephone: "06 47 71 95 85", mail: "marius.hullin@student.ecp.fr", fonction: "Président du festival", 
+
+  const tableauContacts = [{nom: "Marius Hullin", telephone: "06 47 71 95 85", mail: "marius.hullin@student.ecp.fr", fonction: "Président ", 
   path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14915266_1148620721852333_6349151884132689361_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=ba3a063962a7ec054cc698287a094d7f&oe=5C6DEBB2",
   profilePath: "https://www.facebook.com/marius.hullin"}, 
   
-  {nom: "Leah Weisz", telephone: "06 35 50 20 30", mail: "leah.weisz@student.ecp.fr", fonction: "Vice-Présidente du festival", 
-  path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/20664978_859365470878334_1968459890973014306_n.jpg?_nc_cat=110&_nc_ht=scontent-cdt1-1.xx&oh=57aee857b84ad7d89b15f49a46b3506c&oe=5CAFB2D2",
+  {nom: "Leah Weisz", telephone: "06 35 50 02 30", mail: "leah.weisz@student.ecp.fr", fonction: "Vice-Présidente ", 
+  path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/47056853_1138853749596170_730167573013856256_n.jpg?_nc_cat=105&_nc_ht=scontent-cdt1-1.xx&oh=a939131860d5b20e1801fec69afef850&oe=5C654811",
   profilePath: "https://www.facebook.com/leah.weisz.98"}, 
   
-  {nom: "Charles Combelles", telephone: "06 88 69 25 48", mail: "charles.combelles@student.ecp.fr", fonction: "Responsable équipes du festival", 
+  {nom: "Charles Combelles", telephone: "06 88 69 25 48", mail: "charles.combelles@student.ecp.fr", fonction: "Responsable équipes ", 
   path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/41564838_1136235403194795_91169172007944192_n.jpg?_nc_cat=109&_nc_ht=scontent-cdt1-1.xx&oh=a532632d515bfd52c34487b8960b4ce9&oe=5C662412",
   profilePath: "https://www.facebook.com/charles.combelles"}]
-*/
+
 
 
   
