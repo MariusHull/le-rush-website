@@ -21,9 +21,9 @@ class Navbar extends Component {
       
             <ul id="nav-mobile" className="sidenav">
               <li><a href="/">Accueil</a></li>
-              <li><Link to="/ed2019">Edition 2019</Link></li>
-              <li><Link to="/inscription">S'inscrire</Link></li>
-              <li><Link to="/contacts">Contact</Link></li>
+              <li><a href="/ed2019">Edition 2019</a></li>
+              <li><a href="/inscription">S'inscrire</a></li>
+              <li><a href="/contacts">Contact</a></li>
             </ul>
             <a href="" data-target="nav-mobile" className="sidenav-trigger"><i className="material-icons">menu</i></a>
           </div>
