@@ -205,7 +205,7 @@ class Contacts extends Component {
           <div className="row">
           <div class="offset-s3 offset-m4 offset-l4 offset-xl5 col s6 m4 l3 xl3">
             <a href="https://hyris.tv/"> 
-              <img src="http://www.bde.campus.ecp.fr/img/logo%20hyris.png" alt="" class="responsive-img"/>
+              <img src="./IMGLogo_Hyris_B.png" alt="" class="responsive-img"/>
             </a>
           </div></div>
 
