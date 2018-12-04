@@ -8,6 +8,8 @@ var EquipeSchema = new mongoose.Schema({
   veutHebergement : Boolean,
   liste : [String], 
   remarques : String,
+  telCapitaine: String,
+  mailCapitaine:String,
 });
 
 module.exports = mongoose.model('Equipe', EquipeSchema);
