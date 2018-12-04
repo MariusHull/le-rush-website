@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
 
 class Edition2019 extends Component {
   
@@ -64,7 +66,13 @@ class Edition2019 extends Component {
                 </div>
                 <br/><br/><br/>
             </div>
-
+            <div className="row center">
+                <Link to="inscription" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">S'inscrire</Link>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
         </div>
         );
     }
