@@ -11,7 +11,7 @@ class Contacts extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/contacts')
+    axios.get('http://localhost:4242/contacts')
       .then(res => {
         this.setState({ contacts: res.data });
         console.log(this.state.contacts);
