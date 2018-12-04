@@ -87,6 +87,10 @@ footer.page-footer {
   margin-bottom : 300px;
 }
 
+.blackFill {
+  -webkit-text-fill-color: #1a1a1a !important;
+}
+
 .btn {
   background-color: #fe5e5e !important;
 }
