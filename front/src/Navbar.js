@@ -20,10 +20,10 @@ class Navbar extends Component {
             </ul>
       
             <ul id="nav-mobile" className="sidenav">
-              <li><a href="/">Accueil</a></li>
-              <li><a href="/ed2019">Edition 2019</a></li>
-              <li><a href="/inscription">S'inscrire</a></li>
-              <li><a href="/contacts">Contact</a></li>
+              <li><a className="black" href="/">Accueil</a></li>
+              <li><a className="black" href="/ed2019">Edition 2019</a></li>
+              <li><a className="black" href="/inscription">S'inscrire</a></li>
+              <li><a className="black" href="/contacts">Contact</a></li>
             </ul>
             <a href="" data-target="nav-mobile" className="sidenav-trigger"><i className="material-icons">menu</i></a>
           </div>
