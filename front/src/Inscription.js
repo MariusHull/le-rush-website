@@ -26,7 +26,7 @@ class Inscription extends React.Component {
 
   actualiseCapitaine(event){
     if(event.target.name==="numCapitaine"){
-      this.setState({numeroCapitaine : event.target.value});
+      this.setState({telCapitaine : event.target.value});
     } else {
       this.setState({mailCapitaine : event.target.value})
     }
