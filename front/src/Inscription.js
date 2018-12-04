@@ -1,12 +1,14 @@
 import React  from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom'
 
 
 class Inscription extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {nomEcole: "", nomAsso:"", veutPreRush: false, dateArrivee:"Vendredi", veutHebergement: false, remarques:"", liste: []};
+    this.state = {nomEcole: "", nomAsso:"", telCapitaine:"", mailCapitaine:"", veutPreRush: false, dateArrivee:"Vendredi", veutHebergement: false, remarques:"", liste: []};
     this.actualiseNom = this.actualiseNom.bind(this);
+    this.actualiseCapitaine = this.actualiseCapitaine.bind(this)
     this.actualisePreRush = this.actualisePreRush.bind(this);
     this.actualiseVeutHebergement = this.actualiseVeutHebergement.bind(this);
     this.actualiseDateArrivee = this.actualiseDateArrivee.bind(this);
@@ -20,6 +22,14 @@ class Inscription extends React.Component {
     if(target.name==="school"){
       this.setState({nomEcole: nom});
     } else { this.setState({nomAsso: nom})}
+  }
+
+  actualiseCapitaine(capitaine, target){
+    if(target.name==="capitaine"){
+      this.setState({numeroCapitaine: capitaine});
+    } else {
+      this.setState({mailCapitaine : capitaine})
+    }
   }
 
   actualiseListe(liste) {
@@ -51,13 +61,17 @@ class Inscription extends React.Component {
       window.alert("Veuillez bien indiquer le nom de votre école et de votre association/équipe")
       return false
     }
+    else if (this.state.numeroCapitaine==="" || this.state.mailCapitaine==="") {
+      window.alert("Veuillez bien indiquer le numéro et mail du capitaine d'équipe")
+      return false
+    }
     else { return true }
   }
 
   inscrire() {
     if(this.estCorrect()){
       window.confirm('Confirmez-vous les infformations précédentes ?', axios.post('http://localhost:3000/equipes', this.state)
-        .then((result) => {console.log(result)})
+        .then((result) => window.location.href = "/confirm")
         )
     }
   }
@@ -68,6 +82,7 @@ class Inscription extends React.Component {
           <h2>Formulaire d'inscription</h2>
           <br/>
           <NomEquipe nomEcole={this.state.nomEcole} nomAsso={this.state.nomAsso} actualiseNom={this.actualiseNom}/>
+          <Capitaine numeroCapitaine={this.state.numeroCapitaine} mailCapitaine={this.state.mailCapitaine} actualiseCapitaine={this.actualiseCapitaine}/>
           <h3>Membres de l'équipe : </h3>
           <ListeInscrits actualiseListe={this.actualiseListe}/>
           <DateArrivee arriveVendredi={this.state.arriveVendredi} actualiseDateArrivee={this.actualiseDateArrivee}/>
@@ -76,7 +91,7 @@ class Inscription extends React.Component {
           <Remarques remarques={this.state.remarques} actualiseRemarque={this.actualiseRemarque}/>
 
           <div className="row"></div>
-          <a class="waves-effect waves-light btn" onClick={()=> this.inscrire()}><i class="material-icons right">add</i>Confirmer l'inscription</a>
+          <a className="waves-effect waves-light btn" onClick={()=> this.inscrire()}><i className="material-icons right">add</i>Confirmer l'inscription</a>
           <div className="row"></div>
         </div>
       );
@@ -103,7 +118,7 @@ class NomEquipe extends React.Component {
           <div className="row">
           <div className="input-field col s12 l6">
               <textarea
-                class="materialize-textarea"
+                className="materialize-textarea"
                 name='school'
                 id="nomEcole"
                 value={this.props.nomEcole}
@@ -113,7 +128,7 @@ class NomEquipe extends React.Component {
 
           <div className="input-field col s12 l6">
               <textarea
-                class="materialize-textarea"
+                className="materialize-textarea"
                 name='asso'
                 id="nomAsso"
                 value={this.props.nomAsso}
@@ -128,15 +143,57 @@ class NomEquipe extends React.Component {
     }
 }
 
+class Capitaine extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleInputChange(event) {
+    this.props.actualiseCapitaine(event.target.value, event.target)
+  }
+
+
+  render() {
+      return (
+        <form>
+          <div className="row">
+          <div className="input-field col s12 l6">
+              <textarea
+                className="materialize-textarea"
+                name='numCapitaine'
+                id="numeroCapitaine"
+                value={this.props.nomEcole}
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="numeroCapitaine">Numéro du capitaine de l'équipe</label>
+          </div>
+
+          <div className="input-field col s12 l6">
+              <textarea
+                className="materialize-textarea"
+                name='mailCapitaine'
+                id="mailcapitaine"
+                value={this.props.nomAsso}
+                onChange={this.handleInputChange} ></textarea>
+                <label htmlFor="mailcapitaine">Adresse e-mail du capitaine :</label>
+          </div>
+          </div>
+
+        </form>
+        );
+
+    }
+}
+
 class ListeInscrits extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {liste: [], nomEnCours: "", prenomEnCours: "", telEnCours: "", toutChampsComplets: false };
+        this.state = {liste: [], nomEnCours: "", prenomEnCours: "", toutChampsComplets: false };
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(inscrit, target) {
-      if(this.state.nomEnCours===""|| this.state.prenomEnCours==="" || this.state.telEnCours==="" ){
+      if(this.state.nomEnCours===""|| this.state.prenomEnCours==="" ){
         this.setState({toutChampsComplets: false});
       } else {
         this.setState({toutChampsComplets: true});
@@ -144,14 +201,13 @@ class ListeInscrits extends React.Component {
 
       if(target.name==="nom"){
         this.setState({nomEnCours: inscrit});}
-      else if (target.name==="prenom") {
-        this.setState({prenomEnCours: inscrit});}
       else {
-        this.setState({telEnCours: inscrit})}
+        this.setState({prenomEnCours: inscrit});}
+
     }
 
     ajouterLigne(nom,prenom,tel) {
-        this.setState({liste: this.state.liste.concat([nom + "[esp]" +prenom + "[esp]"+tel]), nomEnCours: "", prenomEnCours: "", telEnCours: ""});
+        this.setState({liste: this.state.liste.concat([nom + "[esp]" +prenom]), nomEnCours: "", prenomEnCours: ""});
         setTimeout(() => this.props.actualiseListe(this.state.liste),100);
     }
 
@@ -161,13 +217,12 @@ class ListeInscrits extends React.Component {
             <Candidat
             nom={this.state.nomEnCours}
             prenom={this.state.prenomEnCours}
-            tel={this.state.telEnCours}
             actualiser={this.handleChange}/>
             <br/>
             {this.state.toutChampsComplets ?
-                <a class="waves-effect waves-light btn" onClick={()=> this.ajouterLigne(this.state.nomEnCours,this.state.prenomEnCours,this.state.telEnCours)}><i class="material-icons right">add</i>Inscrire le membre</a>
+                <a className="waves-effect waves-light btn" onClick={()=> this.ajouterLigne(this.state.nomEnCours,this.state.prenomEnCours)}><i className="material-icons right">add</i>Inscrire le membre</a>
                 :
-                <a class="btn disabled" ><i class="material-icons right">add</i>Inscrire le membre</a>
+                <a className="btn disabled" ><i className="material-icons right">add</i>Inscrire le membre</a>
             }
             <div className="row"></div>
             <div className="row">
@@ -181,7 +236,7 @@ class ListeInscrits extends React.Component {
 
 function CandidatsListe(props) {
   const listeCandidats = props.liste.map(
-    (candidat) => <tr> <td>{candidat.split("[esp]")[0]}</td><td>{candidat.split("[esp]")[1]}</td><td>{candidat.split("[esp]")[2]}</td></tr>
+    (candidat) => <tr> <td>{candidat.split("[esp]")[0]}</td><td>{candidat.split("[esp]")[1]}</td></tr>
   );
   return(
     <table>
@@ -189,7 +244,6 @@ function CandidatsListe(props) {
       <tr>
           <th>Nom</th>
           <th>Prénom</th>
-          <th>N° de téléphone</th>
       </tr>
     </thead>
 
@@ -218,7 +272,7 @@ class Candidat extends React.Component {
           <div className="row">
           <div className="input-field">
               <textarea
-                class="materialize-textarea"
+                className="materialize-textarea"
                 name='nom'
                 id="nomParticipant"
                 value={this.props.nom}
@@ -230,7 +284,7 @@ class Candidat extends React.Component {
           <div className="row">
           <div className="input-field">
               <textarea
-                class="materialize-textarea"
+                className="materialize-textarea"
                 name='prenom'
                 id="prenomParticipant"
                 value={this.props.prenom}
@@ -239,17 +293,6 @@ class Candidat extends React.Component {
           </div>  
           </div>
 
-          <div className="row">
-          <div className="input-field">
-              <textarea
-                class="materialize-textarea"
-                name='tel'
-                id="telParticipant"
-                value={this.props.tel}
-                onChange={this.handleInputChange} ></textarea>
-                <label htmlFor="telParticipant">Téléphone :</label>
-          </div>  
-          </div>
           </form>
         );
       }
@@ -312,7 +355,7 @@ class ParticipePreRush extends React.Component {
   render() {
       return (
         <form action="#">
-        &nbsp;Voulez-vous participer à la cérémonie pré-Rush organisée le vendredi soir (masterclass, remise des prix des vidéos anticipées, ...) &nbsp;
+        &nbsp;Voulez-vous participer à la cérémonie pré-Rush organisée le vendredi soir (masterclassName, remise des prix des vidéos anticipées, ...) &nbsp;
 
             <p>
               <label>
@@ -380,12 +423,12 @@ class Remarques extends React.Component {
 
   render() {
       return (
-        <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea" value={this.props.remarques} onChange={this.handleInputChange}></textarea>
-              <label for="textarea1">Remarques quelconques à nous transmettre (facultatif) :</label>
+        <div className="row">
+        <form className="col s12">
+          <div className="row">
+            <div className="input-field col s12">
+              <textarea id="textarea1" className="materialize-textarea" value={this.props.remarques} onChange={this.handleInputChange}></textarea>
+              <label htmlFor="textarea1">Remarques quelconques à nous transmettre (facultatif) :</label>
             </div>
           </div>
         </form>

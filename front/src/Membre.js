@@ -29,12 +29,12 @@ componentDidMount() {
         <h5>Accès réservé aux membres</h5>
         <div className="row">
         <div className="input-field col s12 l6">
-            <textarea
-              class="materialize-textarea"
+            <input type="password"
+              class="validate"
               name='school'
               id="nomEcole"
               value={this.MdP}
-              onChange={this.handleInputChange} ></textarea>
+              onChange={this.handleInputChange} ></input>
               <label htmlFor="nomEcole">Mot De Passe :</label>
         </div>
         </div>

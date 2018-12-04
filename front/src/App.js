@@ -6,6 +6,8 @@ import Contacts from './Contacts.js'
 import Navbar from './Navbar.js'
 import Footer from './Footer.js'
 import Membre from './Membre'
+import Confirm from './Confirmation'
+import Edition2019 from './Edition2019'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
@@ -21,6 +23,8 @@ class App extends Component {
           <Route path="/contacts" component={Contacts} />
           <Route path="/inscription" component={Inscription} />
           <Route path="/membre" component={Membre} />
+          <Route path="/confirm" component={Confirm} />
+          <Route path="/ed2019" component={Edition2019} />
           <Footer/>
         </div>
       </Router>
