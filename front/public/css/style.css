@@ -75,6 +75,18 @@ footer.page-footer {
   background-color: #fe5e5e !important;
 }
 
+.couleurRushPolice {
+  -webkit-text-fill-color: #fe5e5e !important;
+}
+
+.justifier {
+  text-align: justify;
+}
+
+.espace {
+  margin-bottom : 300px;
+}
+
 .btn {
   background-color: #fe5e5e !important;
 }

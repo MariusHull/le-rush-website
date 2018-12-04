@@ -1,6 +1,6 @@
 import React  from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom'
+
 
 
 class Inscription extends React.Component {
@@ -91,7 +91,7 @@ class Inscription extends React.Component {
           <Remarques remarques={this.state.remarques} actualiseRemarque={this.actualiseRemarque}/>
 
           <div className="row"></div>
-          <a className="waves-effect waves-light btn" onClick={()=> this.inscrire()}><i className="material-icons right">add</i>Confirmer l'inscription</a>
+          <button className="waves-effect waves-light btn" onClick={()=> this.inscrire()}><i className="material-icons right">add</i>Confirmer l'inscription</button>
           <div className="row"></div>
         </div>
       );
@@ -428,7 +428,7 @@ class Remarques extends React.Component {
           <div className="row">
             <div className="input-field col s12">
               <textarea id="textarea1" className="materialize-textarea" value={this.props.remarques} onChange={this.handleInputChange}></textarea>
-              <label htmlFor="textarea1">Remarques quelconques à nous transmettre (facultatif) :</label>
+              <label htmlFor="textarea1">Remarques quelconques à nous transmettre (par exemple régimes alimentaires spéciaux) :</label>
             </div>
           </div>
         </form>

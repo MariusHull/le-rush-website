@@ -60,7 +60,7 @@ function ListeEquipes(props) {
     (equipe) => 
     
       <tr> 
-        <td>{equipe.nomEcole} // {equipe.nomAsso}</td>
+        <td>{equipe.nomEcole} / {equipe.nomAsso}</td>
         <td>{equipe.liste.length}</td>
         <td>{equipe.liste.toString()}</td>
         <td>{equipe.veutPreRush.toString()}</td>

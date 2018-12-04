@@ -48,7 +48,7 @@ class Home extends Component {
                   <h2 className="center brown-text"><i className="material-icons">location_city</i></h2>
                   <h5 className="center">Sur le campus de CentraleSupélec</h5>
       
-                  <p className="light">
+                  <p className="light justifier">
                     Le festival se déroule sur le campus de CentraleSupélec qui comprend des installations de pointe.
                     Vous y serez nourris et logés durant tout l'événement.
                   </p>
@@ -60,7 +60,7 @@ class Home extends Component {
                   <h2 className="center brown-text"><i className="material-icons">group</i></h2>
                   <h5 className="center">Un moment de partage</h5>
       
-                  <p className="light">
+                  <p className="light justifier">
                     Retrouvez vous avec plusieurs équipes audiovisuelles venant de toute la France.
                     Mesurez vous à eux sans relâche durant la compétition, puis vous pourrez échanger avec eux durant le DéRush, à la fin du festival.
                   </p>
@@ -72,7 +72,7 @@ class Home extends Component {
                   <h2 className="center brown-text"><i className="material-icons">camera</i></h2>
                   <h5 className="center">Repoussez vos limites</h5>
       
-                  <p className="light">
+                  <p className="light justifier">
                     Le Rush est l'occasion parfaite de montrer ce que vous savez faire, mais aussi d'expérimenter de nouvelles techniques afin d'arriver en première place.
                   </p>
                 </div>
