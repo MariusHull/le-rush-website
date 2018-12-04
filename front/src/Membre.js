@@ -53,20 +53,44 @@ componentDidMount() {
 }
 }
 
+function ListeConcs(props) {
+  const listeConcs = props.liste.map(
+    (candidat) => <tr><td>{candidat.split("[esp]")[0]}</td><td>{candidat.split("[esp]")[1]}</td></tr>
+  );
+  return(
+    <tbody>
+    {listeConcs}
+    </tbody>
+
+  );
+}
 
 
 function ListeEquipes(props) {
   const listeEquipes = props.equipes.map(
     (equipe) => 
     
-      <tr> 
-        <td>{equipe.nomEcole} / {equipe.nomAsso}</td>
-        <td>{equipe.liste.length}</td>
-        <td>{equipe.liste.toString()}</td>
-        <td>{equipe.veutPreRush.toString()}</td>
-        <td>{equipe.veutHebergement.toString()}</td>
-        <td>{equipe.dateArrivee}</td>
+    <table>
+      <thead>
+        <tr> 
+        <th>{equipe.nomEcole} / {equipe.nomAsso}</th>
+        <th>{equipe.liste.length}</th>
+        <th>{equipe.veutPreRush.toString()}</th>
+        <th>{equipe.veutHebergement.toString()}</th>
+        <th>{equipe.dateArrivee}</th>
+        <th>{equipe.telCapitaine}</th>
+        <th>{equipe.mailCapitaine}</th>
       </tr>
+      </thead>
+
+      
+        
+        <ListeConcs liste={equipe.liste}/>
+        
+      
+    </table>
+
+      
       
     
   );
@@ -74,23 +98,29 @@ function ListeEquipes(props) {
 
 
   return(
-    
+    <div>
     <table>
       <thead>
         <tr>
             <th>Ecole et Association : </th>
             <th>Nombre de participants</th>
-            <th>Participants</th>
             <th>PréRush ?</th>
             <th>Hébergement ?</th>
             <th>Arrivée ?</th>
+            <th>Numéro Capitaine</th>
+            <th>Mail Capitaine</th>
         </tr>
       </thead>
 
       <tbody>
-        {listeEquipes}
+
       </tbody>
     </table>
+
+
+    {listeEquipes}
+
+    </div>
    
     
 

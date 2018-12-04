@@ -82,7 +82,7 @@ class Contacts extends Component {
             </div>
             <div class="col s10">
               <span class="black-text">
-                {props.fonction} : <a href={props.profilePath}>{props.nom} </a> 
+                {props.fonction} : <a className="couleurRushPolice"href={props.profilePath}>{props.nom} </a> 
                 <br/>
                 <i class="tiny material-icons">phone</i> {props.tel} 
                 <br/>

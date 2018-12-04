@@ -355,7 +355,7 @@ class ParticipePreRush extends React.Component {
   render() {
       return (
         <form action="#">
-        &nbsp;Voulez-vous participer à la cérémonie pré-Rush organisée le vendredi soir (masterclassName, remise des prix des vidéos anticipées, ...) &nbsp;
+        &nbsp;Voulez-vous participer à la cérémonie pré-Rush organisée le vendredi soir (masterclass, remise des prix des vidéos anticipées, ...) &nbsp;
 
             <p>
               <label>
