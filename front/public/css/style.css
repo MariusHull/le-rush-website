@@ -87,6 +87,10 @@ footer.page-footer {
   margin-bottom : 300px;
 }
 
+.espaceDroite {
+  margin-right: 10px;
+}
+
 .blackFill {
   -webkit-text-fill-color: #1a1a1a !important;
 }

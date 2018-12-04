@@ -28,7 +28,9 @@ class Home extends Component {
                 </h5>
               </div>
               <div className="row center">
-                <Link to="ed2019" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">L'édition 2019</Link>
+                <Link to="ed2019" id="download-button" className="espaceDroite btn-large waves-effect waves-light teal lighten-1">L'édition 2019</Link>
+
+                <Link to="contacts" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">Nous contacter</Link>
               </div>
               <br></br>
       
