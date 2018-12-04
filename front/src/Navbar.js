@@ -13,7 +13,7 @@ class Navbar extends Component {
           <div className="nav-wrapper container">
             <a href="/" id="logo-container"  className="brand-logo"><img src="./IMGLeRushLogo.png" alt="Icone Rush" width="10%" height="10%" align="center"/>Le Rush</a>
             
-            <ul className="right hide-on-med-and-down">
+            <ul className="right hide">
               <li><Link to="/ed2019">Edition 2019</Link></li>
               <li><Link to="/inscription">S'inscrire</Link></li>
               <li><Link to="/contacts">Contact</Link></li>

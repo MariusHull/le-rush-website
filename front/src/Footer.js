@@ -16,7 +16,7 @@ class Footer extends Component {
                 <h5 className="white-text">L'équipe organisatrice</h5>
                 <p className="grey-text text-lighten-4">Tous membres de l'association audiovisuelle Hyris, 
                   nous sommes heureux de reprendre l'organisation de ce festival, 
-                  pour en faire avec vous un événement execptionnel. <br/>
+                  pour en faire avec vous un événement exceptionnel. <br/>
                   
                 </p>
               </div>
