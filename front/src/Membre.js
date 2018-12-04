@@ -14,7 +14,7 @@ class Membre extends Component {
   
 
 componentDidMount() {
-  axios.get('http://localhost:4242/equipes')
+  axios.get('http://rush.cs-campus.fr:4242/equipes')
     .then(res => {
       this.setState({ equipes: res.data });
       console.log(this.state.equipes);

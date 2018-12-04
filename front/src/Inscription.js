@@ -70,7 +70,7 @@ class Inscription extends React.Component {
 
   inscrire() {
     if(this.estCorrect()){
-      window.confirm('Confirmez-vous les infformations précédentes ?', axios.post('http://localhost:4242/equipes', this.state)
+      window.confirm('Confirmez-vous les infformations précédentes ?', axios.post('http://rush.cs-campus.fr:4242/equipes', this.state)
         .then((result) => window.location.href = "/confirm")
         )
     }
