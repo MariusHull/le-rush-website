@@ -24,11 +24,11 @@ class Inscription extends React.Component {
     } else { this.setState({nomAsso: nom})}
   }
 
-  actualiseCapitaine(capitaine, target){
-    if(target.name==="capitaine"){
-      this.setState({numeroCapitaine : capitaine});
+  actualiseCapitaine(event){
+    if(event.target.name==="numCapitaine"){
+      this.setState({numeroCapitaine : event.target.value});
     } else {
-      this.setState({mailCapitaine : capitaine})
+      this.setState({mailCapitaine : event.target.value})
     }
   }
 
@@ -150,7 +150,7 @@ class Capitaine extends React.Component {
   }
 
   handleInputChange(event) {
-    this.props.actualiseCapitaine(event.target.value, event.target)
+    this.props.actualiseCapitaine(event)
   }
 
 
