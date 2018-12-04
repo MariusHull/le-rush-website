@@ -12,7 +12,7 @@ class Contacts extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4242/contacts')
+    axios.get('http://rush.cs-campus.fr:4242/contacts')
       .then(res => {
         this.setState({ contacts: res.data });
         console.log(this.state.contacts);
