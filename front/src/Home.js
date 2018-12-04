@@ -24,10 +24,10 @@ class Home extends Component {
               <div className="row center">
                 <h5 className="header col s12 light">
                   Un festival intense sur le cours d'un week-end. 
-                  Le but : 24 heures pour un court métrage
+                  Le but : 24h pour un court métrage
                 </h5>
               </div>
-              <div className="row center">
+              <div className="row center hide-on-small">
                 <Link to="ed2019" id="download-button" className="espaceDroite btn-large waves-effect waves-light teal lighten-1">L'édition 2019</Link>
 
                 <Link to="contacts" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">Nous contacter</Link>
@@ -36,7 +36,7 @@ class Home extends Component {
       
             </div>
           </div>
-          <div className="parallax"><img src="IMGLens.jpg" alt=""></img></div>
+          <div className="parallax opacite"><img src="IMGLens.jpg" alt=""></img></div>
         </div>
       
       
@@ -90,7 +90,7 @@ class Home extends Component {
             <div className="section no-pad-bot">
               
             </div>
-            <div className="parallax"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/43382026_1860593300642629_1343849757444931584_o.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=9e7209515982f6c76f196512a7a48389&oe=5C72A26B" alt="Unsplashed background img 3"></img></div>
+            <div className="parallax"><img className="zoomout" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/43382026_1860593300642629_1343849757444931584_o.jpg?_nc_cat=101&_nc_ht=scontent-cdt1-1.xx&oh=9e7209515982f6c76f196512a7a48389&oe=5C72A26B" alt="Unsplashed background img 3"></img></div>
           </div>
       
         <div className="container">

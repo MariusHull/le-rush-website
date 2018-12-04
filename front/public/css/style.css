@@ -63,6 +63,11 @@ footer.page-footer {
   margin: 0;
 }
 
+.opacite {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
 #maps {
     align-content: center
 }
@@ -89,6 +94,12 @@ footer.page-footer {
 
 .espaceDroite {
   margin-right: 10px;
+  margin-bottom: 10px;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.zoomout {
+  width: 150%;
 }
 
 .blackFill {
