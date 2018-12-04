@@ -23,7 +23,7 @@ componentDidMount() {
   
 
   render() { 
-    if (this.state.MdP!=="motdepassecompliqué"){
+    if (this.state.MdP!=="bite"){
     return (
         <form className="container">
         <h5>Accès réservé aux membres</h5>
@@ -53,29 +53,46 @@ componentDidMount() {
 }
 }
 
+
+
 function ListeEquipes(props) {
   const listeEquipes = props.equipes.map(
     (equipe) => 
-    <tr> 
-      <td>{equipe.nomEcole} // {equipe.nomAsso}</td>
-      <td>6</td>
-    </tr>
+    
+      <tr> 
+        <td>{equipe.nomEcole} // {equipe.nomAsso}</td>
+        <td>{equipe.liste.length}</td>
+        <td>{equipe.liste.toString()}</td>
+        <td>{equipe.veutPreRush.toString()}</td>
+        <td>{equipe.veutHebergement.toString()}</td>
+        <td>{equipe.dateArrivee}</td>
+      </tr>
+      
+    
   );
 
 
-  return(
-    <table>
-    <thead>
-      <tr>
-          <th>Ecole et Association : </th>
-          <th>Nombre de participants</th>
-      </tr>
-    </thead>
 
-    <tbody>
-    {listeEquipes}
-    </tbody>
-  </table>
+  return(
+    
+    <table>
+      <thead>
+        <tr>
+            <th>Ecole et Association : </th>
+            <th>Nombre de participants</th>
+            <th>Participants</th>
+            <th>PréRush ?</th>
+            <th>Hébergement ?</th>
+            <th>Arrivée ?</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {listeEquipes}
+      </tbody>
+    </table>
+   
+    
 
   );
 }
