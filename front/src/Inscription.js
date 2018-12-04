@@ -26,7 +26,7 @@ class Inscription extends React.Component {
 
   actualiseCapitaine(capitaine, target){
     if(target.name==="capitaine"){
-      this.setState({numeroCapitaine: capitaine});
+      this.setState({numeroCapitaine : capitaine});
     } else {
       this.setState({mailCapitaine : capitaine})
     }
@@ -163,7 +163,7 @@ class Capitaine extends React.Component {
                 className="materialize-textarea"
                 name='numCapitaine'
                 id="numeroCapitaine"
-                value={this.props.nomEcole}
+                value={this.props.numeroCapitaine}
                 onChange={this.handleInputChange} ></textarea>
                 <label htmlFor="numeroCapitaine">Numéro du capitaine de l'équipe</label>
           </div>
@@ -173,7 +173,7 @@ class Capitaine extends React.Component {
                 className="materialize-textarea"
                 name='mailCapitaine'
                 id="mailcapitaine"
-                value={this.props.nomAsso}
+                value={this.props.mailCapitaine}
                 onChange={this.handleInputChange} ></textarea>
                 <label htmlFor="mailcapitaine">Adresse e-mail du capitaine :</label>
           </div>
