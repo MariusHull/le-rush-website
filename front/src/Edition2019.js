@@ -10,26 +10,24 @@ class Edition2019 extends Component {
             <h2>Déroulement de l'édition 2019</h2>
             <h4>La compétition</h4>
             <div className="justifier">
-                Vous aurez à réaliser deux vidéos pour le festival : 
+                L’évènement s’organise autour de 2 concours : le pré-rush et le rush.
                 <ul>
                     <li>
-                        Une vidéo “PréRush”, sur un thème imposé, qui sera dévoilé à la clôture des inscriptions. 
-                        Vous aurez un mois pour réaliser un court-métrage d’une durée minimale de 5 minutes. 
-                        Cette vidéo sera jugée par un jury constitué de membres de Canal +. 
-                        Les trois meilleures vidéos seront récompensées lors d'une cérémonie qui aura lieu le vendredi soir.<br/>
+                        - Le pré-rush : 1 équipe pour faire 1 vidéo de 5 à 7 minutes sur un thème imposé. 
+                        Préparation le mois précédant l’évènement. Ce concours est en partenariat avec CANAL+ qui en sera le jury et organise une remise des prix dans leurs locaux le 1 février. 
+                        A cette occasion des professionnels de Canal+ dispenseront une masterclass sur le thème de la création originale.
                     </li>
                     <li>
-                        <br/>
-                        Une vidéo “Rush”, que vous devrez réaliser en temps limité pendant le weekend. 
-                        Cette vidéo sera jugée par un collège de professionnels du cinéma et sera diffusée lors de la cérémonie de clôture du Festival. 
-                        Le thème sera dévoilé au lancement du Rush, le samedi matin.
+                        - Le rush : 1 équipe, 1 vidéo courte sur un thème imposé à faire de A à Z en 24h. 
+                        Des contraintes seront imposées pendant le weekend. 
+                        En parallèle seront organisées des activités autour du monde du cinéma.
                     </li>
                 </ul>
             </div>
             <h4>Les équipes</h4>
             <div className="justifier">
                 Vous pouvez constituer des équipes de 5 à 7 participants pour prendre part à la compétition. 
-                Chaque équipe devra comporter un capitaine, qui sera la personne responsable en contact avec le respo équipe (Charles Combelles, 06 88 69 25 48).
+                Chaque équipe devra comporter un capitaine, qui sera la personne responsable en contact avec le respo équipe (Charles Combelles).
             </div>
 
             <h4>Paiement de l'inscription</h4>
@@ -49,10 +47,9 @@ class Edition2019 extends Component {
             <h4>Déroulement du week-end</h4>
             <div className="justifier">
                 <div>
-                    Le vendredi 1 Février au soir Canal+ vous accueille pour une cérémonie récompensant les meilleures vidéos ‘Prérush’. 
-                    Au programme, un départ du campus en navette à 18h vers les locaux de Canal + à Issy-les-Moulineaux où une remise de prix aura lieu par notre partenaire. 
-                    Cette cérémonie sera suivie d’une masterclass dispensée par Canal et d’un cocktail. 
-                    Vous pourrez être hébergés le vendredi soir sur le campus de CentraleSupélec. 
+                Le vendredi 1 Février au soir CANAL+ vous accueille pour une cérémonie récompensant les meilleures vidéos ‘Prérush’. 
+                Au programme, un départ du campus en navette à 18h vers les locaux de CANAL + à Issy-les-Moulineaux où une remise de prix aura lieu par notre partenaire. 
+                Cette cérémonie sera suivie d’une masterclass dispensée par CANAL+ et d’un buffet.
                 </div>
                 <br/>
                 <div>

@@ -84,8 +84,6 @@ class Contacts extends Component {
               <span class="black-text">
                 {props.fonction} : <a className="couleurRushPolice"href={props.profilePath}>{props.nom} </a> 
                 <br/>
-                <i class="tiny material-icons">phone</i> {props.tel} 
-                <br/>
                 <i class="tiny material-icons" >mail</i> {props.mail}
               </span>
             </div>
@@ -175,9 +173,9 @@ class Contacts extends Component {
         </div>
           
           <div className="row">
-          <div class="offset-s2 offset-m3 offset-l3 offset-xl4 col s9 m5 l6 xl4">
+          <div class="offset-s2 offset-m3 offset-l3 offset-xl4 col s10 m6 l6 xl4">
             <a href="https://www.mycanal.fr/"> 
-              <img src="https://www.vivendi.com/wp-content/uploads/2018/01/Canal-Groupe-VF-blanc-sans-cartouche-e1527750370787.png" alt="" class="responsive-img"/>
+              <img src="./IMGCanal+ Groupe.png" alt="" class="responsive-img"/>
             </a>
           </div></div>
 
