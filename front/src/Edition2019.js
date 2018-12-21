@@ -13,12 +13,13 @@ class Edition2019 extends Component {
                 L’évènement s’organise autour de 2 concours : le pré-rush et le rush.
                 <ul>
                     <li>
-                        - Le pré-rush : 1 équipe pour faire 1 vidéo de 5 à 7 minutes sur un thème imposé. 
+                        - <a className="couleurRushPolice"> Le pré-rush </a> : 1 équipe pour faire 1 vidéo de 5 à 7 minutes sur un thème imposé. 
                         Préparation le mois précédant l’évènement. Ce concours est en partenariat avec CANAL+ qui en sera le jury et organise une remise des prix dans leurs locaux le 1 février. 
-                        A cette occasion des professionnels de Canal+ dispenseront une masterclass sur le thème de la création originale.
+                        A cette occasion des professionnels de CANAL+ dispenseront une masterclass sur le thème de la création originale.
                     </li>
+                    <br/>
                     <li>
-                        - Le rush : 1 équipe, 1 vidéo courte sur un thème imposé à faire de A à Z en 24h. 
+                        - <a className="couleurRushPolice"> Le rush </a> : 1 équipe, 1 vidéo courte sur un thème imposé à faire de A à Z en 24h. 
                         Des contraintes seront imposées pendant le weekend. 
                         En parallèle seront organisées des activités autour du monde du cinéma.
                     </li>
@@ -26,13 +27,14 @@ class Edition2019 extends Component {
             </div>
             <h4>Les équipes</h4>
             <div className="justifier">
-                Vous pouvez constituer des équipes de 5 à 7 participants pour prendre part à la compétition. 
+                Le concours est réservé aux équipes qui viennent des <a className="couleurRushPolice">Ecoles et grandes Ecoles d'Ingénieur et de Commerce</a>. 
+                Vous pouvez constituer des équipes de <a className="couleurRushPolice">5 à 7 participants</a> pour prendre part à la compétition.
                 Chaque équipe devra comporter un capitaine, qui sera la personne responsable en contact avec le respo équipe (Charles Combelles).
             </div>
 
             <h4>Paiement de l'inscription</h4>
             <div className="justifier">
-                Les frais d’inscription sont de 10€ par personne sans hébergement le vendredi soir, 12€ par personne si vous souhaitez être hébergé sur le campus le vendredi soir en plus du samedi.  
+                Les frais d’inscription sont de <a className="couleurRushPolice">10€ par personne</a> sans hébergement le vendredi soir, 12€ par personne si vous souhaitez être hébergé sur le campus le vendredi soir en plus du samedi.  
                 Vous pouvez payer par <a className="couleurRushPolice" href="https://lydia-app.com/fr/">Lydia</a> ou par virement (un rib vous sera envoyé). 
                 Le paiement s’effectue pour toute l’équipe en même temps. 
             </div>
@@ -48,12 +50,13 @@ class Edition2019 extends Component {
             <div className="justifier">
                 <div>
                 Le vendredi 1 Février au soir CANAL+ vous accueille pour une cérémonie récompensant les meilleures vidéos ‘Prérush’. 
-                Au programme, un départ du campus en navette à 18h vers les locaux de CANAL + à Issy-les-Moulineaux où une remise de prix aura lieu par notre partenaire. 
-                Cette cérémonie sera suivie d’une masterclass dispensée par CANAL+ et d’un buffet.
+                Au programme, un <a className="couleurRushPolice">départ du campus en navette à 18h</a> vers les locaux de CANAL + à Issy-les-Moulineaux 
+                où une <a className="couleurRushPolice">remise de prix</a> aura lieu par notre partenaire. 
+                Cette cérémonie sera suivie d’une <a className="couleurRushPolice">masterclass dispensée par CANAL+ et d’un buffet</a>.
                 </div>
                 <br/>
                 <div>
-                    Le week-end commencera autour d’un petit déjeuner à 8h30 où vous serez briefés sur le déroulement du week-end. 
+                    Le week-end commencera autour d’un <a className="couleurRushPolice">petit déjeuner à 8h30 où vous serez briefés</a> sur le déroulement du week-end. 
                     Le thème du concours sera dévoilé à 10h.
                 </div>
                 <br/>
