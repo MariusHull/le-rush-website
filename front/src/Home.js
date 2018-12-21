@@ -44,6 +44,8 @@ class Home extends Component {
           <div className="section">
       
 
+        <img class="responsive-img centered" src="./GIFcomRush.gif"/>
+
             <div className="row">
               <div className="col s12 m4">
                 <div className="icon-block">
