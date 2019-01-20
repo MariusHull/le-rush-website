@@ -60,6 +60,7 @@ function ListeConcs(props) {
   return(
     <tbody>
     {listeConcs}
+    <tr>{props.rqs}</tr>
     </tbody>
 
   );
@@ -85,7 +86,7 @@ function ListeEquipes(props) {
 
       
         
-        <ListeConcs liste={equipe.liste}/>
+        <ListeConcs liste={equipe.liste} rqs={equipe.remarques}/>
         
       
     </table>
