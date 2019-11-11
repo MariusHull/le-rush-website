@@ -23,14 +23,14 @@ class Home extends Component {
               <h1 className="header center teal-text text-lighten-2">Le Rush</h1>
               <div className="row center">
                 <h5 className="header col s12 light">
-                  Un festival intense sur le cours d'un week-end. 
-                  Le but : 24h pour un court métrage
+                Un festival de courts-métrages étudiants le temps d’un week-end rassemblant un concours entre associations d’audiovisuel et des activités autour du cinéma pour le public.
                 </h5>
               </div>
               <div className="row center hide-on-small">
-                <Link to="ed2019" id="download-button" className="espaceDroite btn-large waves-effect waves-light teal lighten-1">L'édition 2019</Link>
-
-                <Link to="contacts" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">Nous contacter</Link>
+                <Link to="deroulement" id="download-button" className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Déroulement</Link>
+                <Link to="inscription" id="download-button" className="espaceDroite btn-large waves-effect waves-light teal lighten-1 pulse">S'inscrire</Link>
+                <Link to="contacts" id="download-button" className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Contacts</Link>
+                
               </div>
               <br></br>
       
@@ -42,15 +42,14 @@ class Home extends Component {
       
         <div className="container"> 
           <div className="section">
-      
-
-        <img class="responsive-img centered" src="./GIFcomRush.gif"/>
-
             <div className="row">
+              <div className="header center s12 m4">
+              <img alt = "GIFRush" class="responsive-img" weight="640" height="480" src="./GIFcomRush.gif"/>
+              </div>
               <div className="col s12 m4">
                 <div className="icon-block">
                   <h2 className="center brown-text"><i className="material-icons">location_city</i></h2>
-                  <h5 className="center">Sur le campus de CentraleSupélec</h5>
+                  <h5 className="center">CentraleSupélec</h5>
       
                   <p className="light justifier">
                     Le festival se déroule sur le campus de CentraleSupélec qui comprend des installations de pointe.
@@ -70,7 +69,7 @@ class Home extends Component {
                   </p>
                 </div>
               </div>
-      
+              
               <div className="col s12 m4">
                 <div className="icon-block">
                   <h2 className="center brown-text"><i className="material-icons">camera</i></h2>
@@ -81,7 +80,21 @@ class Home extends Component {
                   </p>
                 </div>
               </div>
+              <br></br>
             </div>
+            <div className="container">
+                <h1 className="header center teal-text text-lighten-2">Save the Date !</h1>
+                <div className="row center">
+                  <h5 className="header col s12 light">
+                    Le Rush 3ème édition se déroulera le week-end du 29 février - 1 mars 2020 sur le campus de CentraleSupélec
+                  </h5>
+                </div>
+                <div className="row center">
+                  <Link to="inscription" id="download-button" className="btn-large waves-effect waves-light teal lighten-1 pulse">S'inscrire</Link>
+                </div>
+                
+        
+              </div>
       
           </div>
         </div>
@@ -98,20 +111,7 @@ class Home extends Component {
         <div className="container">
           <div className="section">
       
-          <div className="container">
-                <br></br>
-                <h1 className="header center teal-text text-lighten-2">Une date : 1-3 février 2019 </h1>
-                <div className="row center">
-                  <h5 className="header col s12 light">
-                    Cette année, Le Rush se déroule sur le Week-End du vendredi 1er au dimanche 3 février... Save the date! 
-                  </h5>
-                </div>
-                <div className="row center">
-                  <Link to="inscription" id="download-button" className="btn-large waves-effect waves-light teal lighten-1">S'inscrire</Link>
-                </div>
-                <br></br>
-        
-              </div>
+          
       
           </div>
         </div>
@@ -120,7 +120,7 @@ class Home extends Component {
         <div className="parallax-container valign-wrapper">
           <div className="section no-pad-bot">
           </div>
-          <div className="parallax"><img src="https://galerie.pics/public/thumbnails/2017-2018/event/public/rush/20180113-182459-8233-Arnaud-Chantepie_web.jpg" alt="Le Rush logo"></img></div>
+          <div className="parallax"><img src="IMGAcceuil.jpg" alt="Le Rush logo"></img></div>
         </div>
       </div>
     );

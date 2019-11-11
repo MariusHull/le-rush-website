@@ -7,29 +7,33 @@ class Edition2019 extends Component {
     render() {
       return (
         <div class = "container"> 
-            <h2>Déroulement de l'édition 2019</h2>
+            <h2>Déroulement du Rush</h2>
             <h4>La compétition</h4>
             <div className="justifier">
-                L’évènement s’organise autour de 2 concours : le pré-rush et le rush.
+            Le Rush est un festival de courts-métrages étudiants qui se déroule du vendredi après-midi au dimanche après-midi (certaines équipes venant de loin devront voyager le vendredi dans la journée).
+             L’évènement s’organise autour de deux temps forts : le Pré-Rush et le Rush.
                 <ul>
                     <li>
-                        - <a className="couleurRushPolice"> Le pré-rush </a> : 1 équipe pour faire 1 vidéo de 5 à 7 minutes sur un thème imposé. 
-                        Préparation le mois précédant l’évènement. Ce concours est en partenariat avec CANAL+ qui en sera le jury et organise une remise des prix dans leurs locaux le 1 février. 
-                        A cette occasion des professionnels de CANAL+ dispenseront une masterclass sur le thème de la création originale.
+                        - <a className="couleurRushPolice"> Le pré-rush </a> : chaque équipe doit produire une vidéo de 5 à 7 minutes sur un thème imposé qui sera révélé début janvier. 
+                        Les équipes disposent d’un mois pour réaliser le court-métrage.
+                        Le Pré-Rush sera jugé par un jury sélectionné par notre partenaire CANAL+ qui organisera la remise des prix dans leurs locaux le vendredi en fin d’après midi suivi d’un apéro cordial.
+
                     </li>
                     <br/>
                     <li>
-                        - <a className="couleurRushPolice"> Le rush </a> : 1 équipe, 1 vidéo courte sur un thème imposé à faire de A à Z en 24h. 
-                        Des contraintes seront imposées pendant le weekend. 
-                        En parallèle seront organisées des activités autour du monde du cinéma.
+                        - <a className="couleurRushPolice"> Le rush </a> : Le thème imposé est révélé le vendredi soir au retour de la remise des prix chez CANAL+. 
+                        Les équipes ont alors jusqu’au dimanche matin pour produire un court-métrage sur ce thème imposé. 
+                        Une contrainte viendra s’ajouter le samedi dans la journée. En parallèle seront organisées des activités autour du monde du cinéma pour le public. 
+                        Le dimanche matin sera organisé la cérémonie.
+
                     </li>
                 </ul>
             </div>
             <h4>Les équipes</h4>
             <div className="justifier">
-                Le concours est réservé aux équipes qui viennent des <a className="couleurRushPolice">Ecoles et grandes Ecoles d'Ingénieur et de Commerce</a>. 
-                Vous pouvez constituer des équipes de <a className="couleurRushPolice">5 à 7 participants</a> pour prendre part à la compétition.
-                Chaque équipe devra comporter un capitaine, qui sera la personne responsable en contact avec le respo équipe (Charles Combelles).
+                Le concours rassemble des associations d’audiovisuel étudiantes venant <a className="couleurRushPolice">d’écoles de l’enseignement supérieur de toute la France </a>. 
+                Une équipe doit être constituée de <a className="couleurRushPolice">5 à 7 participants</a> pour prendre part à la compétition. 
+                Chaque équipe devra désigner un capitaine qui sera la personne responsable tout au long du concours d’être en contact avec les organisateurs du Rush.
             </div>
 
             <h4>Paiement de l'inscription</h4>
@@ -41,29 +45,26 @@ class Edition2019 extends Component {
 
             <h4>Le matériel</h4>
             <div className="justifier">
-                Vous devrez apporter votre propre matériel de tournage (caméras, light, prise de son) et de montage (pc). Nous ne pourrons pas prêter de matériel sur place, en raison du grand nombre d’équipes. 
-	            Nous vous fournirons une salle sécurisée, avec une carte d’accès par équipe, dans laquelle vous pourrez laisser votre matériel pendant votre tournage.
-	            Vous aurez également accès à un endroit où vous pourrez vous installer pour faire votre montage, et vous aurez un accès Internet via eduroam.
+            Les équipes doivent apporter leur propre matériel de tournage (caméras, light, prise de son, batteries, carte SD) et de montage (PC). 
+            Chaque équipe disposera tout au long du Rush une salle dans laquelle elle pourra disposer son matériel en toute sécurité et réaliser son montage (accès à des bureaux, chaises, tableaux, prises électriques). 
+            Un accès Internet en Wifi via eduroam est aussi assuré.
             </div>
 
-            <h4>Déroulement du week-end</h4>
+            <h4>Logistique</h4>
             <div className="justifier">
-                <div>
-                Le vendredi 1 Février au soir CANAL+ vous accueille pour une cérémonie récompensant les meilleures vidéos ‘Prérush’. 
-                Au programme, un <a className="couleurRushPolice">départ du campus en navette à 18h</a> vers les locaux de CANAL + à Issy-les-Moulineaux 
-                où une <a className="couleurRushPolice">remise de prix</a> aura lieu par notre partenaire. 
-                Cette cérémonie sera suivie d’une <a className="couleurRushPolice">masterclass dispensée par CANAL+ et d’un buffet</a>.
-                </div>
-                <br/>
-                <div>
-                    Le week-end commencera autour d’un <a className="couleurRushPolice">petit déjeuner à 8h30 où vous serez briefés</a> sur le déroulement du week-end. 
-                    Le thème du concours sera dévoilé à 10h.
-                </div>
-                <br/>
-                <div>
-                    Vous aurez ensuite jusqu’à dimanche midi pour tourner vos vidéos. 
-                    Une cérémonie aura lieu dans l’après-midi où seront remis jusqu’à 2000 euros de lots pour <em>la meilleure vidéo, la meilleure réalisation, le meilleur scénario. </em>
-                </div>
+            Pendant toute la durée du Rush, une salle (type dojo) sera mise à la disposition des équipes pour pouvoir se reposer et dormir. 
+            Chaque participant devra alors apporter un duvet. Des douches et sanitaires seront aussi en libre-service pour les participants.
+            En ce qui concerne les repas, <a className="couleurRushPolice">ils sont compris dans les frais d’inscriptions</a>, ainsi des moments seront réservés dans la compétition pour se restaurer grâce aux repas préparés par nos staffeurs.
+
+            </div>
+
+            <h4>Cérémonie de clôture</h4>
+            <div className="justifier">
+            Le dimanche en début de matinée après la fin de la compétition aura lieu un brunch suivi de la cérémonie de clôture où les courts-métrages où les courts-métrages de toutes les équipes seront projetés devant les participants et le public. 
+            Les jurys ayant visionné les courts-métrages plus tôt dans la matinée remettront alors les prix suivants : <a className="couleurRushPolice">Meilleure Photographie, Meilleur scénario, Grand Prix. </a>
+            Chaque équipe gagnante recevra un lot en rapport avec du matériel d’audiovisuel.
+
+        
                 <br/><br/><br/>
             </div>
             <div className="row center">

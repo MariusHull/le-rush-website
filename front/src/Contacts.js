@@ -23,8 +23,9 @@ class Contacts extends Component {
     return (
       <div class = "container"> 
       <h2> Contacts : </h2>
-        <ContactList tableauContacts={tableauContacts}/>
-  
+        <div class = "center">  
+          <ContactList tableauContacts={tableauContacts}/>
+        </div>
       <h2> Plan d'accès : </h2>
         <AccessList/>
 
@@ -46,24 +47,20 @@ class Contacts extends Component {
 
 
 
-  const tableauContacts = [{nom: "Marius Hullin", telephone: "06 47 71 95 85", mail: "marius.hullin@student.ecp.fr", fonction: "Président ", 
-  path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14915266_1148620721852333_6349151884132689361_n.jpg?_nc_cat=111&_nc_ht=scontent-cdt1-1.xx&oh=ba3a063962a7ec054cc698287a094d7f&oe=5C6DEBB2",
-  profilePath: "https://www.facebook.com/marius.hullin"}, 
+  const tableauContacts = [{nom: "Marina Tazit", mail: "marina.tazit@student-cs.fr", fonction: "Président ", desc: "Question d'équipes"}, 
   
-  {nom: "Leah Weisz", telephone: "06 35 50 02 30", mail: "leah.weisz@student.ecp.fr", fonction: "Vice-Présidente ", 
-  path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/47056853_1138853749596170_730167573013856256_n.jpg?_nc_cat=105&_nc_ht=scontent-cdt1-1.xx&oh=a939131860d5b20e1801fec69afef850&oe=5C654811",
-  profilePath: "https://www.facebook.com/leah.weisz.98"}, 
+  {nom: "Magali Morin",  mail: "magali.morin@student-cs.fr", fonction: "Vice-Présidente ", desc: "Questions partenariats"}, 
   
-  {nom: "Charles Combelles", telephone: "06 88 69 25 48", mail: "charles.combelles@student.ecp.fr", fonction: "Responsable équipes ", 
-  path: "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/41564838_1136235403194795_91169172007944192_n.jpg?_nc_cat=109&_nc_ht=scontent-cdt1-1.xx&oh=a532632d515bfd52c34487b8960b4ce9&oe=5C662412",
-  profilePath: "https://www.facebook.com/charles.combelles"}]
+  {nom: "Nicolas Pannier", mail: "nicolas.pannier@student-cs.fr", fonction: "Secrétaire général", desc: "Questions logistiques, planifications" },
+  {nom: "Maxime Rougieux", mail: "maxime.rougieux@student-cs.fr", fonction: "Trésorier", desc: "Questions frais divers, subventions" }
+]
 
 
 
   
   function ContactList(props) {
     const listContacts = props.tableauContacts.map(
-      (contact) => <AfficheContact fonction ={contact.fonction} nom={contact.nom} tel={contact.telephone} mail={contact.mail} path={contact.path} profilePath={contact.profilePath}/>
+      (contact) => <AfficheContact fonction ={contact.fonction} nom={contact.nom}  mail={contact.mail} desc={contact.desc}/>
     );
     return(
       <div class="row">
@@ -74,17 +71,15 @@ class Contacts extends Component {
 
   function AfficheContact(props) {
     const renderr = (
-      <div class="col s12 m12 l7">
+      <div class="col s12 m12 l7 center">
         <div class="card-panel black lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
-              <img src={props.path} alt="" class="circle responsive-img"/>
-            </div>
-            <div class="col s10">
+          <div class="row valign-wrapper center">
+            <div class="col s12">
               <span class="black-text">
                 {props.fonction} : <a className="couleurRushPolice"href={props.profilePath}>{props.nom} </a> 
                 <br/>
-                <i class="tiny material-icons" >mail</i> {props.mail}
+                <i class="tiny material-icons" >mail</i> {props.mail} <br/>
+                A contacter pour : {props.desc}
               </span>
             </div>
           </div>
