@@ -38,3 +38,6 @@ Il faut principalement ajouter 5 pages :
 - [x] La page Contacts
 - [x] La page de consultation des équipes
 
+# Déploiement
+Pour déployer le site, il faut lancer la commande `npm run-script build` dans le dossier front, puis de lancer nginx et enfin `pm2 start back/app.js`
+
