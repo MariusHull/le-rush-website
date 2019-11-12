@@ -13,15 +13,15 @@ class Navbar extends Component {
           <div className="nav-wrapper container">
             <a href="/" id="logo-container"  className="brand-logo"><img src="./IMGLeRushLogo.png" alt="Icone Rush" width="10%" height="10%" align="center"/>Le Rush</a>
             
-            <ul className="right hide">
-              <li><Link to="/ed2019">Edition 2019</Link></li>
+            <ul className="right hide-on-med-and-down">
+              <li><Link to="/deroulement">Déroulement</Link></li>
               <li><Link to="/inscription">S'inscrire</Link></li>
               <li><Link to="/contacts">Contact</Link></li>
             </ul>
       
             <ul id="nav-mobile" className="sidenav">
               <li><a className="blackFill" href="/">Accueil</a></li>
-              <li><a className="blackFill" href="/ed2019">Edition 2019</a></li>
+              <li><a className="blackFill" href="/deroulement">Déroulement</a></li>
               <li><a className="blackFill" href="/inscription">S'inscrire</a></li>
               <li><a className="blackFill" href="/contacts">Contact</a></li>
             </ul>

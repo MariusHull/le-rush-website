@@ -74,7 +74,14 @@ class Edition2019 extends Component {
                 <br/>
                 <br/>
             </div>
+            
+            <div className="parallax-container valign-wrapper">
+            <div className="section no-pad-bot">
+            </div>
+            <div className="parallax"><img src="IMGAcceuil.jpg" className="zoomout" alt="Le Rush logo"></img></div>
+        </div>    
         </div>
+        
         );
     }
 }
