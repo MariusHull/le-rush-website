@@ -27,18 +27,7 @@ class Home extends Component {
                                 associations d’audiovisuel et des activités autour du cinéma pour le public.
                             </h5>
                         </div>
-                        <div className="row center hide-on-small">
-                            <Link to="deroulement" id="download-button"
-                                className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Déroulement
-                            </Link>
-                            <Link to="inscription" id="download-button"
-                                className="espaceDroite btn-large waves-effect waves-light teal lighten-1">S'inscrire
-                            </Link>
-                            <Link to="contacts" id="download-button"
-                                className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Contacts
-                            </Link>
-
-                        </div>
+                        
                         <br></br>
             
                     </div>
@@ -60,7 +49,7 @@ class Home extends Component {
                         </div>
                         <div className="row center">
                             <Link to="inscription" id="download-button"
-                                className="btn-large waves-effect waves-light teal lighten-1 pulse">S'inscrire</Link>
+                                className="btn-large waves-effect waves-light teal lighten-1 pulse">Inscription</Link>
                         </div>
 
                     <br/>
@@ -113,7 +102,18 @@ class Home extends Component {
                         <br></br>
                     </div>
 
-
+                    <div className="row center hide-on-small">
+                            <Link to="deroulement" id="download-button"
+                                className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Déroulement
+                            </Link>
+                            <Link to="inscription" id="download-button"
+                                className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Inscription
+                            </Link>
+                            <Link to="contacts" id="download-button"
+                                className="espaceDroite btn-large waves-effect waves-light teal lighten-1">Contact
+                            </Link>
+                
+                        </div>
                 </div>
             </div>
 
