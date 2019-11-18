@@ -24,7 +24,7 @@ class Edition2019 extends Component {
                         - <a className="couleurRushPolice"> Le rush </a> : Le thème imposé est révélé le vendredi soir au retour de la remise des prix chez CANAL+. 
                         Les équipes ont alors jusqu’au dimanche matin pour produire un court-métrage sur ce thème imposé. 
                         Une contrainte viendra s’ajouter le samedi dans la journée. En parallèle seront organisées des activités autour du monde du cinéma pour le public. 
-                        Le dimanche matin sera organisé la cérémonie.
+                        Le dimanche matin sera organisée la cérémonie.
 
                     </li>
                 </ul>
@@ -60,7 +60,7 @@ class Edition2019 extends Component {
 
             <h4>Cérémonie de clôture</h4>
             <div className="justifier">
-            Le dimanche en début de matinée après la fin de la compétition aura lieu un brunch suivi de la cérémonie de clôture où les courts-métrages où les courts-métrages de toutes les équipes seront projetés devant les participants et le public. 
+            Le dimanche en début de matinée après la fin de la compétition aura lieu un brunch suivi de la cérémonie de clôture où les courts-métrages de toutes les équipes seront projetés devant les participants et le public. 
             Les jurys ayant visionné les courts-métrages plus tôt dans la matinée remettront alors les prix suivants : <a className="couleurRushPolice">Meilleure Photographie, Meilleur scénario, Grand Prix. </a>
             Chaque équipe gagnante recevra un lot en rapport avec du matériel d’audiovisuel.
 
