@@ -37,7 +37,7 @@ class Contacts extends Component {
               </div>
             </div>
           </div>
-        </div>  
+        </div> 
           <ContactList tableauContacts={tableauContacts}/>
           
         </div>

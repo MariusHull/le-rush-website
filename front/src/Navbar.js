@@ -11,7 +11,7 @@ class Navbar extends Component {
     <div>
       <nav className="black" role="navigation">
           <div className="nav-wrapper container">
-            <a href="/" id="logo-container"  className="brand-logo"><img src="./IMGLeRushLogo.png" alt="Icone Rush" width="10%" height="10%" align="center"/>Le Rush</a>
+            <a href="" id="logo-container"  className="brand-logo"><img src="./IMGLeRushLogo.png" alt="Icone Rush" width="10%" height="10%" align="center"/></a>
             
             <ul className="right hide-on-med-and-down">
               <li><Link to="/deroulement">Déroulement</Link></li>
