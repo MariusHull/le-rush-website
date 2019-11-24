@@ -28,6 +28,7 @@ class Edition2019 extends Component {
 
                     </li>
                 </ul>
+            Le dimanche matin sera organisée la cérémonie de clôture où un jury de professionnels viendra remettre les prix aux gagnants du concours.
             </div>
             <h4>Les équipes</h4>
             <div className="justifier">
@@ -36,12 +37,7 @@ class Edition2019 extends Component {
                 Chaque équipe devra désigner un capitaine qui sera la personne responsable tout au long du concours d’être en contact avec les organisateurs du Rush.
             </div>
 
-            <h4>Paiement de l'inscription</h4>
-            <div className="justifier">
-                Les frais d’inscription sont de <a className="couleurRushPolice">10€ par personne</a> sans hébergement le vendredi soir, 12€ par personne si vous souhaitez être hébergé sur le campus le vendredi soir en plus du samedi.  
-                Vous pouvez payer par <a className="couleurRushPolice" href="https://lydia-app.com/fr/">Lydia</a> ou par virement (un rib vous sera envoyé). 
-                Le paiement s’effectue pour toute l’équipe en même temps. 
-            </div>
+            
 
             <h4>Le matériel</h4>
             <div className="justifier">
@@ -57,7 +53,12 @@ class Edition2019 extends Component {
             En ce qui concerne les repas, <a className="couleurRushPolice">ils sont compris dans les frais d’inscriptions</a>, ainsi des moments seront réservés dans la compétition pour se restaurer grâce aux repas préparés par nos staffeurs.
 
             </div>
-
+            <h4>Paiement de l'inscription</h4>
+            <div className="justifier">
+                Les frais d’inscription sont de <a className="couleurRushPolice">10€ par personne</a>   
+                Vous pouvez payer par <a className="couleurRushPolice" href="https://lydia-app.com/fr/">Lydia</a> ou par virement (un rib vous sera envoyé). 
+                Le paiement s’effectue pour toute l’équipe en même temps. 
+            </div>
             <h4>Cérémonie de clôture</h4>
             <div className="justifier">
             Le dimanche en début de matinée après la fin de la compétition aura lieu un brunch suivi de la cérémonie de clôture où les courts-métrages de toutes les équipes seront projetés devant les participants et le public. 
